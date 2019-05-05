@@ -25,7 +25,7 @@ const App = () => {
 	]
 	return (
 			<div>
-				<AppHeader todo={1} done={3}/>
+				<AppHeader toDo={1} done={3}/>
 				<SearchPanel/>
 				<ItemStatusFilter/>
 				<TodoList todos={todoData}/>
