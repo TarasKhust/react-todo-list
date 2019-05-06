@@ -1,46 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './TodoListItem.css';
 
-export default class TodoListItem extends Component {
+const TodoListItem = (props) => {
 
-	state = {
-		done: false,
-		important: false,
-	};
+	const { label, onDeleted, onToggleImportant, onToggleDone, important, done } = props;
+	let classNames = 'todo-list-item';
+	if (done) {
+		classNames += ' done';
+	}
 
-	onLabbelClick = () => {
-		this.setState(({done}) => {
-			return {
-				done: !done
-			}
-		});
-	};
+	if (important) {
+		classNames += ' important';
+	}
 
-	onMarkClick = () => {
-		this.setState(({important}) => {
-			return {
-				important: !important
-			}
-		});
-	};
-
-	render() {
-		const { label, onDeleted } = this.props;
-		const { done, important } = this.state;
-		let classNames = 'todo-list-item';
-		if (done) {
-			classNames += ' done';
-		}
-
-		if (important) {
-			classNames += ' important';
-		}
-
-		return (
-				<span className={classNames}>
+	return (
+			<span className={classNames}>
 			<span
-					onClick={this.onLabbelClick}
+					onClick={onToggleDone}
 					className='todo-list-item'>
 				{label}
 			</span>
@@ -52,13 +29,14 @@ export default class TodoListItem extends Component {
 			</button>
 
 			<button type='button'
-			        onClick={this.onMarkClick}
+			        onClick={onToggleImportant}
 			        className='btn btn-outline-success btn-sm'>
 				<i className='fa fa-exclamation'/>
 			</button>
 
 
 			</span>
-		);
-	};
+	);
 }
+
+export default TodoListItem
