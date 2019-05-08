@@ -3,3 +3,6 @@
 /.env
 .quokka
 yarn-error.log
+/.cache/
+/bin/
+/dist/
