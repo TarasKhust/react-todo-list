@@ -4,8 +4,8 @@
   "private": true,
   "homepage": "https://taraskhust.github.io/react-todo-list/",
   "scripts": {
-    "dev": "parcel src/index.html --open 'Google Chrome' ",
-    "prod": "parcel build src/index.html"
+    "dev": "parcel index.html --open 'Google Chrome' ",
+    "prod": "parcel build src/index.js -d build"
   },
   "keywords": [],
   "author": "",
