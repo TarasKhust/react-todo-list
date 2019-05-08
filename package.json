@@ -2,33 +2,30 @@
   "name": "react-todo-list",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://taraskhust.github.io/react-todo-list/",
-  "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0"
-  },
+  "homepage": "https://taraskhust.github.io/react-todo-list/",
   "scripts": {
-    "dev": "parcel public/index.html --open 'Google Chrome' ",
-    "prod": "parcel build public/index.html",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "parcel src/index.html --open 'Google Chrome' ",
+    "prod": "parcel build src/index.html"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
+    "babel-plugin-react-app": "0.0.0",
+    "babel-preset-env": "^1.7.0",
+    "bootstrap": "^4.3.1",
+    "parcel-bundler": "^1.12.3",
+    "postcss-modules": "^1.4.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "preact": "^8.4.2"
   }
 }
