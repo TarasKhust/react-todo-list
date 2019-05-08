@@ -29,7 +29,7 @@ export default class App extends Component {
 		};
 	}
 
-	deleteItem = (id) => {
+	deleteItem = id => {
 		this.setState(({ todoData }) => {
 			const idx = todoData.findIndex(el => el.id === id);
 			const newArray = [...todoData.slice(0, idx), ...todoData.slice(idx + 1)];
@@ -39,7 +39,7 @@ export default class App extends Component {
 		});
 	};
 
-	addItem = (text) => {
+	addItem = text => {
 		// generate id ?
 		const newItem = this.createTodoItem(text);
 		// add element in array ?
@@ -69,7 +69,7 @@ export default class App extends Component {
 		];
 	}
 
-	onToggleImportant = (id) => {
+	onToggleImportant = id => {
 		this.setState(({ todoData }) => {
 			return {
 				todoData: this.toggleProperty(todoData, id, 'important'),
@@ -77,7 +77,7 @@ export default class App extends Component {
 		});
 	};
 
-	onToggleDone = (id) => {
+	onToggleDone = id => {
 		this.setState(({ todoData }) => {
 			return {
 				todoData: this.toggleProperty(todoData, id, 'done'),
@@ -93,7 +93,7 @@ export default class App extends Component {
 				(item) => item.label.toLowerCase().indexOf(term.toLowerCase()) > -1);
 	};
 
-	searchItem = (term) => {
+	searchItem = term => {
 		this.setState({ term });
 	};
 
@@ -110,7 +110,7 @@ export default class App extends Component {
 		}
 	};
 
-	onFilterChange = (filter) => {
+	onFilterChange = filter => {
 		this.setState({ filter });
 	};
 
