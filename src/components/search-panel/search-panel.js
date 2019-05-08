@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 
-export default class SearchPanel extends Component{
+export default class SearchPanel extends Component {
 
 	state = {
-		term: ''
-	}
+		term: '',
+	};
 
 	onSearchChange = (evt) => {
 		const term = evt.target.value;
-		this.setState({ term })
-		this.props.searchItem(term)
-}
+		this.setState({ term });
+		this.props.searchItem(term);
+	};
+
 	render() {
 		return (
 				<input type="text"

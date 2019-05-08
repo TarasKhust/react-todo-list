@@ -6,6 +6,8 @@ import TodoList from '../todo-list';
 import ItemAddFrom from '../item-add-form/item-add-form';
 import ItemStatusFilter from '../item-status-filter';
 
+import './app.css'
+
 export default class App extends Component {
 	maxId = 0;
 	state = {
@@ -109,8 +111,8 @@ export default class App extends Component {
 	};
 
 	onFilterChange = (filter) => {
-		this.setState({ filter })
-	}
+		this.setState({ filter });
+	};
 
 	render() {
 		const { todoData, term, filter } = this.state;
@@ -118,11 +120,11 @@ export default class App extends Component {
 		const doneCount = todoData.filter(el => el.done).length;
 		const todoCount = todoData.length - doneCount;
 		return (
-				<div>
+				<div className='main'>
 					<AppHeader toDo={todoCount} done={doneCount}/>
 					<SearchPanel searchItem={this.searchItem}/>
 					<ItemStatusFilter filter={filter}
-					onFilterChange={this.onFilterChange}/>
+					                  onFilterChange={this.onFilterChange}/>
 					<TodoList todos={visibleItems}
 					          onDeleted={this.deleteItem}
 					          onToggleImportant={this.onToggleImportant}
